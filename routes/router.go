@@ -13,10 +13,10 @@ func Router() {
 	// 	})
 	// })
 	router.GET("/books", controllers.GetAllBooks)
-	// router.GET("/book/:id", getBookById)
-	// router.POST("/book", createBook)
-	// router.PUT("/book/:id", updateBook)
-	// router.DELETE("book/:id", deleteBook)
+	router.GET("/book/:id", controllers.GetBookById)
+	router.POST("/book", controllers.CreateBook)
+	router.PUT("/book/:id", controllers.UpdateBook)
+	router.DELETE("book/:id", controllers.DeleteBook)
 
 	router.Run(":5000")
 }
